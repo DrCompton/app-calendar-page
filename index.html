@@ -127,32 +127,24 @@
   var currentDate = new Date();
   currentDate.setHours(0, 0, 0, 0); // Set time to midnight for comparison
 
-  // Get all semester header cells in the table
-  var semesterCells = document.querySelectorAll('#dynamicTable tbody tr:nth-child(2) td');
+  // Get all date cells in the table
+  var dateCells = document.querySelectorAll('#dynamicTable tbody td');
 
-  // Iterate through each semester header cell and check if it contains "Fall 2024" or "Spring 2025"
-  semesterCells.forEach(function(cell) {
-    // Check if the cell content includes "Fall 2024" or "Spring 2025"
-    if (cell.textContent.includes("Fall 2024") || cell.textContent.includes("Spring 2025")) {
-      // Get the corresponding row index
-      var rowIndex = cell.parentElement.rowIndex;
+  // Iterate through each date cell and compare with the current date
+  dateCells.forEach(function(cell) {
+    // Skip cells containing semester names
+    if (!isNaN(Date.parse(cell.textContent))) {
+      var cellDate = new Date(cell.textContent);
+      cellDate.setHours(0, 0, 0, 0); // Set time to midnight for comparison
 
-      // Get all date cells in the corresponding row
-      var dateCells = document.querySelectorAll('#dynamicTable tbody tr:nth-child(' + (rowIndex + 1) + ') td');
-
-      // Iterate through each date cell and compare with the current date
-      dateCells.forEach(function(dateCell) {
-        var cellDate = new Date(dateCell.textContent);
-        cellDate.setHours(0, 0, 0, 0); // Set time to midnight for comparison
-
-        // Compare dates and apply strikethrough if past
-        if (cellDate < currentDate) {
-          dateCell.style.textDecoration = 'line-through';
-        }
-      });
+      // Compare dates and apply strikethrough if past
+      if (cellDate < currentDate) {
+        cell.style.textDecoration = 'line-through';
+      }
     }
   });
 </script>
 
 </body>
+</html>
 </html>
