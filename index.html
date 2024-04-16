@@ -128,7 +128,7 @@
   currentDate.setHours(0, 0, 0, 0); // Set time to midnight for comparison
 
   // Get all semester header cells in the table
-  var semesterCells = document.querySelectorAll('#dynamicTable tbody tr:first-child td');
+  var semesterCells = document.querySelectorAll('#dynamicTable tbody tr:nth-child(2) td');
 
   // Iterate through each semester header cell and check if it contains "Fall 2024" or "Spring 2025"
   semesterCells.forEach(function(cell) {
