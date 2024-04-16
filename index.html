@@ -128,19 +128,16 @@
   currentDate.setHours(0, 0, 0, 0); // Set time to midnight for comparison
 
   // Get all date cells in the table
-  var dateCells = document.querySelectorAll('#dynamicTable tbody td');
+  var dateCells = document.querySelectorAll('#dynamicTable tbody td:not(:first-child):not(:last-child)');
 
   // Iterate through each date cell and compare with the current date
-  dateCells.forEach(function(cell, index) {
-    // Check if the cell is in the first column or the last column
-    if (index % 4 !== 0) { // Assuming each row has 3 columns, adjust accordingly if different
-      var cellDate = new Date(cell.textContent);
-      cellDate.setHours(0, 0, 0, 0); // Set time to midnight for comparison
+  dateCells.forEach(function(cell) {
+    var cellDate = new Date(cell.textContent);
+    cellDate.setHours(0, 0, 0, 0); // Set time to midnight for comparison
 
-      // Compare dates and apply strikethrough if past
-      if (cellDate < currentDate) {
-        cell.style.textDecoration = 'line-through';
-      }
+    // Compare dates and apply strikethrough if past
+    if (cellDate < currentDate) {
+      cell.style.textDecoration = 'line-through';
     }
   });
 </script>
