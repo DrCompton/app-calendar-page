@@ -132,8 +132,8 @@
 
   // Iterate through each date cell and compare with the current date
   dateCells.forEach(function(cell) {
-    // Skip cells containing semester names
-    if (!isNaN(Date.parse(cell.textContent))) {
+    // Check if the cell content matches the pattern for semester names
+    if (!/(Fall|Spring)\s\d{4}/.test(cell.textContent)) {
       var cellDate = new Date(cell.textContent);
       cellDate.setHours(0, 0, 0, 0); // Set time to midnight for comparison
 
@@ -146,5 +146,4 @@
 </script>
 
 </body>
-</html>
 </html>
