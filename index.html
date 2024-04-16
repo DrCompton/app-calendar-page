@@ -132,15 +132,15 @@
 
   // Iterate through each date cell and compare with the current date
   dateCells.forEach(function(cell) {
-    var cellDate = new Date(cell.textContent);
-    cellDate.setHours(0, 0, 0, 0); // Set time to midnight for comparison
+    // Check if the cell content does not contain "Fall 2024" or "Spring 2025"
+    if (!cell.textContent.includes("Fall 2024") && !cell.textContent.includes("Spring 2025")) {
+      var cellDate = new Date(cell.textContent);
+      cellDate.setHours(0, 0, 0, 0); // Set time to midnight for comparison
 
-    // console.log("Current Date:", currentDate);
-    // console.log("Cell Date:", cellDate);
-
-    // Compare dates and apply strikethrough if past
-    if (cellDate < currentDate) {
-      cell.style.textDecoration = 'line-through';
+      // Compare dates and apply strikethrough if past
+      if (cellDate < currentDate) {
+        cell.style.textDecoration = 'line-through';
+      }
     }
   });
 </script>
