@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dynamic Strikethrough Table</title>
+<style>
+  /* Optional: Some basic styling for demonstration */
+  table {
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+
+<table id="dynamicTable" style="border-collapse: collapse; margin-left: auto; margin-right: auto;" border="1">
+    <tbody>
+        <tr style="height: 53px;">
+            <td style="text-align: center; width: 7.1378%; height: 53px;">
+                <h3><strong>&nbsp;</strong></h3>
+            </td>
+            <td style="height: 53px; width: 21.1015%; text-align: center;" colspan="2">
+                <h3><span style="color: #8b1c40;"><strong>AP&amp;P Committee</strong></span></h3>
+            </td>
+            <td style="width: 12.7132%; height: 53px; text-align: center;">
+                <h3><span style="color: #8b1c40;"><strong>Effective Catalog</strong></span></h3>
+            </td>
+        </tr>
+        <tr style="height: 53px;">
+            <td style="width: 7.1378%; text-align: center; height: 53px;">
+                <h4><span style="color: #8b1c40;"><strong>Semester</strong></span></h4>
+            </td>
+            <td style="width: 10.6873%; height: 53px; text-align: center;">
+                <h4><span style="color: #8b1c40;"><strong>Agenda Deadline</strong></span></h4>
+            </td>
+            <td style="width: 10.4142%; height: 53px; text-align: center;">
+                <h4><span style="color: #8b1c40;"><strong>Meeting</strong></span></h4>
+            </td>
+            <td style="width: 12.7132%; height: 53px; text-align: center;">
+                <h4><span style="color: #8b1c40;"><strong>Semester</strong></span></h4>
+            </td>
+        </tr>
+        <tr style="height: 35px;">
+            <td style="height: 53px; width: 7.1378%; text-align: center;" rowspan="7">
+                <h4><strong>Fall 2024</strong></h4>
+            </td>
+            <td style="width: 10.6873%; height: 35px; text-align: center;">08/23/24</td>
+            <td style="width: 10.4142%; height: 35px; text-align: center;">08/29/24</td>
+            <td style="height: 35px; width: 12.7132%; text-align: center;" rowspan="7">
+                <h4><strong>Fall 2025</strong></h4>
+            </td>
+        </tr>
+        <tr style="height: 35px;">
+            <td style="width: 10.6873%; height: 29px; text-align: center;">09/06/24</td>
+            <td style="width: 10.4142%; height: 29px; text-align: center;">09/12/24</td>
+        </tr>
+        <tr style="height: 35px;">
+            <td style="width: 10.6873%; height: 29px; text-align: center;">09/20/24</td>
+            <td style="width: 10.4142%; height: 29px; text-align: center;">09/26/24</td>
+        </tr>
+        <tr style="height: 35px;">
+            <td style="width: 10.6873%; height: 29px; text-align: center;">10/04/24</td>
+            <td style="width: 10.4142%; height: 29px; text-align: center;">10/10/24</td>
+        </tr>
+        <tr style="height: 35px;">
+            <td style="width: 10.6873%; height: 29px; text-align: center;">10/18/24</td>
+            <td style="width: 10.4142%; height: 29px; text-align: center;">10/24/24</td>
+        </tr>
+        <tr style="height: 35px;">
+            <td style="width: 10.6873%; height: 29px; text-align: center;">10/25/24</td>
+            <td style="width: 10.4142%; height: 29px; text-align: center;">*10/31/24</td>
+        </tr>
+        <tr style="height: 35px;">
+            <td style="width: 10.6873%; height: 29px; text-align: center;">11/08/24</td>
+            <td style="width: 10.4142%; height: 29px; text-align: center;">11/14/24</td>
+        </tr>
+        <tr style="height: 35px;">
+            <td style="width: 7.1378%; text-align: center;" rowspan="8">
+                <h4><strong>Spring 2025</strong></h4>
+            </td>
+            <td style="width: 10.6873%; text-align: center;">02/07/25</td>
+            <td style="width: 10.4142%; text-align: center;">02/13/25</td>
+            <td style="width: 12.7132%; text-align: center;" rowspan="8">
+                <h4><strong>Fall 2026</strong></h4>
+            </td>
+        </tr>
+        <tr style="height: 35px;">
+            <td style="width: 10.6873%; text-align: center;">02/21/25</td>
+            <td style="width: 10.4142%; text-align: center;">02/27/25</td>
+        </tr>
+        <tr style="height: 35px;">
+            <td style="width: 10.6873%; text-align: center;">03/07/25</td>
+            <td style="width: 10.4142%; text-align: center;">03/13/25</td>
+        </tr>
+        <tr style="height: 35px;">
+            <td style="width: 10.6873%; text-align: center;">03/21/25</td>
+            <td style="width: 10.4142%; text-align: center;">03/27/25</td>
+        </tr>
+        <tr style="height: 35px;">
+            <td style="width: 10.6873%; text-align: center;">04/04/25</td>
+            <td style="width: 10.4142%; text-align: center;">04/10/25</td>
+        </tr>
+        <tr style="height: 35px;">
+            <td style="width: 10.6873%; text-align: center;">04/18/25</td>
+            <td style="width: 10.4142%; text-align: center;">04/24/25</td>
+        </tr>
+        <tr style="height: 35px;">
+            <td style="width: 10.6873%; text-align: center;">05/02/25</td>
+            <td style="width: 10.4142%; text-align: center;">05/08/25</td>
+        </tr>
+        <tr style="height: 35px;">
+            <td style="width: 10.6873%; text-align: center;">05/16/25</td>
+            <td style="width: 10.4142%; text-align: center;">05/22/25</td>
+        </tr>
+    </tbody>
+</table>
+<p>&nbsp;</p>
+<script>
+  // Get the current date
+  var currentDate = new Date();
+  currentDate.setHours(0, 0, 0, 0); // Set time to midnight for comparison
+
+  // Get all date cells in the table
+  var dateCells = document.querySelectorAll('#dynamicTable tbody td');
+
+  // Iterate through each date cell and compare with the current date
+  dateCells.forEach(function(cell) {
+    var cellDate = new Date(cell.textContent);
+    cellDate.setHours(0, 0, 0, 0); // Set time to midnight for comparison
+
+    // console.log("Current Date:", currentDate);
+    // console.log("Cell Date:", cellDate);
+
+    // Compare dates and apply strikethrough if past
+    if (cellDate < currentDate) {
+      cell.style.textDecoration = 'line-through';
+    }
+  });
+</script>
+
+</body>
+</html>
