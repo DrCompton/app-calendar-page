@@ -131,9 +131,9 @@
   var dateCells = document.querySelectorAll('#dynamicTable tbody td');
 
   // Iterate through each date cell and compare with the current date
-  dateCells.forEach(function(cell) {
-    // Check if the cell content matches the pattern for semester names
-    if (!/(Fall|Spring)\s\d{4}/.test(cell.textContent)) {
+  dateCells.forEach(function(cell, index) {
+    // Check if the cell is in the first column or the last column
+    if (index % 3 !== 0) { // Assuming each row has 3 columns, adjust accordingly if different
       var cellDate = new Date(cell.textContent);
       cellDate.setHours(0, 0, 0, 0); // Set time to midnight for comparison
 
